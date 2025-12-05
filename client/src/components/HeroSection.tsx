@@ -11,7 +11,6 @@ export default function HeroSection({ onCtaClick }: HeroSectionProps) {
       <div className="absolute inset-0 bg-gradient-to-b from-violet-950/50 via-background to-background" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-gradient-to-r from-violet-500/20 via-fuchsia-500/20 to-cyan-500/20 blur-3xl rounded-full" />
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gradient-to-tl from-fuchsia-500/10 to-transparent blur-3xl rounded-full" />
-      
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-violet-500/30 bg-violet-500/10 mb-8">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
@@ -53,7 +52,7 @@ export default function HeroSection({ onCtaClick }: HeroSectionProps) {
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
-          <div className="flex items-center justify-center gap-3 px-4 py-3 rounded-lg border border-white/5 bg-white/5 backdrop-blur-sm">
+          <div className="flex items-center justify-center gap-3 px-4 py-3 rounded-lg border border-white/5 bg-white/5 backdrop-blur-sm pl-[8px] pr-[8px] pt-[6px] pb-[6px]">
             <Activity className="w-5 h-5 text-violet-400" />
             <span className="text-sm">Real-time Uptime</span>
           </div>
