@@ -16,9 +16,9 @@ export default function Landing() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       <Header onCtaClick={scrollToRegister} />
-      <main>
+      <main className="overflow-x-hidden">
         <HeroSection onCtaClick={scrollToRegister} />
         <ProblemSection />
         <BenefitsSection />
