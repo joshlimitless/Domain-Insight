@@ -34,7 +34,7 @@ export default function Header({ onCtaClick }: HeaderProps) {
           data-testid="button-header-cta"
         >
           <span className="hidden sm:inline">TAKE CONTROL</span>
-          <span className="sm:hidden">Get Started</span>
+          <span className="sm:hidden pt-[0px] pb-[0px] text-center">TAKE CONTROL</span>
         </Button>
       </div>
     </header>
