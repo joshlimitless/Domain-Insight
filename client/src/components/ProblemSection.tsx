@@ -1,5 +1,6 @@
 import { Lock, Eye, EyeOff, AlertTriangle, X, Check } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { FadingDescription } from "./FadingDescription";
 
 const marketplaces = [
   { name: "Afternic", domain: "afternic.com" },
@@ -37,9 +38,9 @@ export default function ProblemSection() {
             }}
           />
         </div>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-center mb-8">
+        <FadingDescription className="text-lg text-muted-foreground max-w-2xl mx-auto text-center mb-8">
           When you list on marketplaces or use parking services, you lose visibility into your traffic data.
-        </p>
+        </FadingDescription>
         
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">

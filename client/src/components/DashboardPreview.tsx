@@ -9,6 +9,7 @@ import {
   Activity,
   ArrowUpRight
 } from "lucide-react";
+import { FadingDescription } from "./FadingDescription";
 
 export default function DashboardPreview() {
   return (
@@ -37,9 +38,9 @@ export default function DashboardPreview() {
             }}
           />
         </div>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-center mb-8">
+        <FadingDescription className="text-lg text-muted-foreground max-w-2xl mx-auto text-center mb-8">
           A powerful dashboard that gives you complete visibility into your domain traffic.
-        </p>
+        </FadingDescription>
         
         <div className="relative">
           <div className="absolute -inset-4 bg-gradient-to-r from-violet-500/20 via-fuchsia-500/20 to-cyan-500/20 blur-2xl rounded-3xl" />

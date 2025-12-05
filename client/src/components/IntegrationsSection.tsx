@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Code2, Plug, ArrowRight, Check } from "lucide-react";
 import { SiGoogle } from "react-icons/si";
+import { FadingDescription } from "./FadingDescription";
 
 const integrations = [
   {
@@ -57,10 +58,10 @@ export default function IntegrationsSection() {
             }}
           />
         </div>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-center mb-8">
+        <FadingDescription className="text-lg text-muted-foreground max-w-2xl mx-auto text-center mb-8">
           Insert code from Google Analytics, Phantom, Seline, and other third-party providers. 
           <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400">cord.to</span> gives you full control.
-        </p>
+        </FadingDescription>
         
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           {integrations.map((integration, index) => (

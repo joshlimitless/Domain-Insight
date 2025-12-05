@@ -16,6 +16,7 @@ import {
   Shield,
   Zap
 } from "lucide-react";
+import { FadingDescription } from "./FadingDescription";
 
 export default function RegistrationForm() {
   const [name, setName] = useState("");
@@ -81,9 +82,9 @@ export default function RegistrationForm() {
             }}
           />
         </div>
-        <p className="text-muted-foreground text-center mb-6">
+        <FadingDescription className="text-muted-foreground text-center mb-6">
           Join thousands of domain investors who are reclaiming their data.
-        </p>
+        </FadingDescription>
         
         <Card className="p-8 border-white/10 bg-card/80 backdrop-blur-xl">
           <form onSubmit={handleSubmit} className="space-y-6">
