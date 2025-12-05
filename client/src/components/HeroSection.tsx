@@ -56,7 +56,7 @@ export default function HeroSection({ onCtaClick }: HeroSectionProps) {
             <Activity className="w-5 h-5 text-violet-400" />
             <span className="text-sm">Real-time Uptime</span>
           </div>
-          <div className="flex items-center justify-center gap-3 px-4 py-3 rounded-lg border border-white/5 bg-white/5 backdrop-blur-sm">
+          <div className="flex items-center justify-center gap-3 px-4 py-3 rounded-lg border border-white/5 bg-white/5 backdrop-blur-sm pl-[8px] pr-[8px] pt-[6px] pb-[6px]">
             <Globe className="w-5 h-5 text-fuchsia-400" />
             <span className="text-sm">Geographic Data</span>
           </div>
