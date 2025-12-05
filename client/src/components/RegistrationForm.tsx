@@ -98,6 +98,13 @@ export default function RegistrationForm() {
         className="absolute -top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-violet-500/10 via-fuchsia-500/10 to-cyan-500/10 blur-3xl rounded-full transition-opacity duration-300"
         style={{ opacity: gradientOpacity }}
       />
+      <div 
+        className="absolute top-0 left-0 right-0 h-32 pointer-events-none transition-opacity duration-300"
+        style={{
+          background: 'linear-gradient(to bottom, transparent 0%, hsl(var(--background)) 100%)',
+          opacity: gradientOpacity
+        }}
+      />
       
       <div 
         className="bg-background text-center pt-2 pb-2 relative z-10"
