@@ -45,7 +45,7 @@ export default function HeroSection({ onCtaClick }: HeroSectionProps) {
           <Button 
             size="lg"
             variant="outline"
-            className="border-white/10 bg-white/5 backdrop-blur-sm"
+            className="border-white/10 bg-white/5 backdrop-blur-sm pl-[16px] pr-[16px]"
             data-testid="button-hero-learn"
           >
             Learn More
