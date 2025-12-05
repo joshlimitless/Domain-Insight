@@ -2,12 +2,12 @@ import { Lock, Eye, EyeOff, AlertTriangle, X, Check } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const marketplaces = [
-  "Afternic",
-  "GoDaddy",
-  "Spaceship",
-  "Dynadot",
-  "Sedo",
-  "ParkingCrew"
+  { name: "Afternic", domain: "afternic.com" },
+  { name: "GoDaddy", domain: "godaddy.com" },
+  { name: "Spaceship", domain: "spaceship.com" },
+  { name: "Dynadot", domain: "dynadot.com" },
+  { name: "Sedo", domain: "sedo.com" },
+  { name: "ParkingCrew", domain: "parkingcrew.com" }
 ];
 
 export default function ProblemSection() {
@@ -85,16 +85,21 @@ export default function ProblemSection() {
             <Card className="p-8 border-white/10">
               <h4 className="text-sm font-medium text-muted-foreground mb-6">Affected Platforms</h4>
               <div className="grid grid-cols-2 gap-4">
-                {marketplaces.map((name, i) => (
+                {marketplaces.map((marketplace, i) => (
                   <div 
-                    key={name}
+                    key={marketplace.name}
                     className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5"
                     data-testid={`marketplace-${i}`}
                   >
-                    <div className="w-8 h-8 rounded-md bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center text-xs font-bold">
-                      {name.slice(0, 2)}
+                    <div className="w-8 h-8 rounded-md bg-white flex items-center justify-center overflow-hidden">
+                      <img 
+                        src={`/api/logo/${marketplace.domain}`}
+                        alt={`${marketplace.name} logo`}
+                        className="w-6 h-6 object-contain"
+                        loading="lazy"
+                      />
                     </div>
-                    <span className="text-sm">{name}</span>
+                    <span className="text-sm">{marketplace.name}</span>
                   </div>
                 ))}
               </div>
