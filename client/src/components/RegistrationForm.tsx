@@ -5,6 +5,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
+import { useMutation } from "@tanstack/react-query";
+import { apiRequest } from "@/lib/queryClient";
 import { 
   User, 
   Mail, 
@@ -19,25 +21,34 @@ export default function RegistrationForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+
+  const registerMutation = useMutation({
+    mutationFn: async (data: { name: string; email: string; phone: string }) => {
+      const response = await apiRequest("POST", "/api/register", data);
+      return response.json();
+    },
+    onSuccess: (data) => {
+      toast({
+        title: "Welcome to cord.to!",
+        description: data.message || "Check your email for next steps.",
+      });
+      setName("");
+      setEmail("");
+      setPhone("");
+    },
+    onError: (error: Error) => {
+      toast({
+        title: "Registration failed",
+        description: error.message || "Please try again.",
+        variant: "destructive",
+      });
+    },
+  });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    
-    // todo: remove mock functionality
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Welcome to cord.to!",
-      description: "Check your email for next steps.",
-    });
-    
-    setIsSubmitting(false);
-    setName("");
-    setEmail("");
-    setPhone("");
+    registerMutation.mutate({ name, email, phone });
   };
 
   return (
@@ -115,10 +126,10 @@ export default function RegistrationForm() {
             <Button 
               type="submit"
               className="w-full bg-gradient-to-r from-violet-500 to-fuchsia-500 border-0 text-white shadow-xl shadow-violet-500/30"
-              disabled={isSubmitting}
+              disabled={registerMutation.isPending}
               data-testid="button-submit"
             >
-              {isSubmitting ? (
+              {registerMutation.isPending ? (
                 "Processing..."
               ) : (
                 <>
