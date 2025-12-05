@@ -133,9 +133,11 @@ export default function RegistrationForm() {
       </div>
       
       <div className="relative z-10 max-w-xl mx-auto px-6">
-        <FadingDescription className="text-muted-foreground text-center mb-6">
-          Join thousands of domain investors who are reclaiming their data.
-        </FadingDescription>
+        <div style={{ opacity: gradientOpacity, transition: 'opacity 300ms' }}>
+          <FadingDescription className="text-muted-foreground text-center mb-6">
+            Join thousands of domain investors who are reclaiming their data.
+          </FadingDescription>
+        </div>
         
         <Card className="p-8 border-white/10 bg-card/80 backdrop-blur-xl">
           <form onSubmit={handleSubmit} className="space-y-6">
