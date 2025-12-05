@@ -8,12 +8,12 @@ interface HeaderProps {
 export default function Header({ onCtaClick }: HeaderProps) {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-background/80 backdrop-blur-xl">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-2 sm:gap-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-12 flex items-center justify-between gap-2 sm:gap-4">
         <div className="flex items-center gap-2 shrink-0">
-          <div className="w-8 h-8 rounded-md bg-gradient-to-br from-violet-500 to-fuchsia-500 flex items-center justify-center">
-            <Link className="w-4 h-4 text-white" />
+          <div className="w-6 h-6 rounded-md bg-gradient-to-br from-violet-500 to-fuchsia-500 flex items-center justify-center">
+            <Link className="w-3 h-3 text-white" />
           </div>
-          <span className="text-xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400" data-testid="text-logo">cord.to</span>
+          <span className="text-xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400" style={{ fontFamily: 'var(--font-title)' }} data-testid="text-logo">cord.to</span>
         </div>
         
         <nav className="hidden md:flex items-center gap-8">

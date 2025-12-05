@@ -15,7 +15,7 @@ export function FadingDescription({ children, className = "" }: FadingDescriptio
 
     const handleScroll = () => {
       const rect = element.getBoundingClientRect();
-      const headerHeight = 64; // 4rem header
+      const headerHeight = 48; // 3rem header
       const stickyTitleBottom = headerHeight + 60; // Approximate sticky title height
       
       // Calculate how close the description is to the sticky title

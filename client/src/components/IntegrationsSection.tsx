@@ -38,7 +38,7 @@ export default function IntegrationsSection() {
           className="bg-background text-center pt-3 pb-2 relative"
           style={{ 
             position: 'sticky', 
-            top: '4rem', 
+            top: '3rem', 
             zIndex: 40 
           }}
         >

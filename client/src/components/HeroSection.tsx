@@ -7,7 +7,7 @@ interface HeroSectionProps {
 
 export default function HeroSection({ onCtaClick }: HeroSectionProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-16">
+    <section className="relative min-h-screen flex items-center justify-center pt-12">
       <div className="absolute inset-0 bg-gradient-to-b from-violet-950/50 via-background to-background" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-gradient-to-r from-violet-500/20 via-fuchsia-500/20 to-cyan-500/20 blur-3xl rounded-full" />
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gradient-to-tl from-fuchsia-500/10 to-transparent blur-3xl rounded-full" />
