@@ -58,14 +58,14 @@ export default function RegistrationForm() {
       
       <div className="relative z-10 max-w-xl mx-auto px-6">
         <div 
-          className="bg-background text-center pt-8 pb-4 relative"
+          className="bg-background text-center pt-3 pb-2 relative"
           style={{ 
             position: 'sticky', 
             top: '4rem', 
             zIndex: 40 
           }}
         >
-          <Badge className="mb-4 bg-violet-500/10 text-violet-400 border-violet-500/20">
+          <Badge className="mb-2 bg-violet-500/10 text-violet-400 border-violet-500/20">
             <Sparkles className="w-3 h-3 mr-1" /> Early Access
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold" data-testid="text-register-title">
