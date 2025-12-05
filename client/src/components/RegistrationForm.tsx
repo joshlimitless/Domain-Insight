@@ -125,7 +125,7 @@ export default function RegistrationForm() {
             
             <Button 
               type="submit"
-              className="w-full bg-gradient-to-r from-violet-500 to-fuchsia-500 border-0 text-white shadow-xl shadow-violet-500/30"
+              className="w-full bg-gradient-to-r from-violet-500 to-fuchsia-500 border-0 text-white shadow-xl shadow-violet-500/30 gradient-outline"
               disabled={registerMutation.isPending}
               data-testid="button-submit"
             >
