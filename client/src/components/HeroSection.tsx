@@ -32,7 +32,7 @@ export default function HeroSection({ onCtaClick }: HeroSectionProps) {
           Get clarity into your domain traffic even when using marketplace landers from Afternic, GoDaddy, Spaceship, or parking services like Sedo and ParkingCrew.
         </p>
         
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+        <div className="flex flex-row items-center justify-center gap-4 mb-16">
           <Button 
             size="lg"
             onClick={onCtaClick}
