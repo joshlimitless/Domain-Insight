@@ -69,7 +69,7 @@ export default function BenefitsSection() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400"> Profit Away</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            cord.to provides in-depth analytics so you can make data-driven decisions about your domain portfolio.
+            <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400">cord.to</span> provides in-depth analytics so you can make data-driven decisions about your domain portfolio.
           </p>
         </div>
         

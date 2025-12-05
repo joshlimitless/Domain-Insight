@@ -43,7 +43,7 @@ export default function IntegrationsSection() {
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Insert code from Google Analytics, Phantom, Seline, and other third-party providers. 
-            cord.to gives you full control.
+            <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400">cord.to</span> gives you full control.
           </p>
         </div>
         
@@ -82,7 +82,7 @@ export default function IntegrationsSection() {
             <div className="text-center lg:text-left">
               <h3 className="text-xl font-semibold mb-2">Custom Script Support</h3>
               <p className="text-muted-foreground max-w-xl">
-                Need something else? cord.to supports any JavaScript snippet. Add custom tracking, 
+                Need something else? <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400">cord.to</span> supports any JavaScript snippet. Add custom tracking, 
                 chat widgets, or any other third-party code to your domain landers.
               </p>
             </div>
