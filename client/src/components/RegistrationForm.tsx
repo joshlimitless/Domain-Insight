@@ -57,19 +57,32 @@ export default function RegistrationForm() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-violet-500/10 via-fuchsia-500/10 to-cyan-500/10 blur-3xl rounded-full" />
       
       <div className="relative z-10 max-w-xl mx-auto px-6">
-        <div className="sticky-section-header bg-background">
-          <div className="text-center">
-            <Badge className="mb-4 bg-violet-500/10 text-violet-400 border-violet-500/20">
-              <Sparkles className="w-3 h-3 mr-1" /> Early Access
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-register-title">
-              Ready to
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400"> Take Control?</span>
-            </h2>
-            <p className="text-muted-foreground">
-              Join thousands of domain investors who are reclaiming their data.
-            </p>
-          </div>
+        <div 
+          className="bg-background text-center pt-8 pb-6 relative"
+          style={{ 
+            position: 'sticky', 
+            top: '4rem', 
+            zIndex: 40 
+          }}
+        >
+          <Badge className="mb-4 bg-violet-500/10 text-violet-400 border-violet-500/20">
+            <Sparkles className="w-3 h-3 mr-1" /> Early Access
+          </Badge>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-register-title">
+            Ready to
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400"> Take Control?</span>
+          </h2>
+          <p className="text-muted-foreground">
+            Join thousands of domain investors who are reclaiming their data.
+          </p>
+          <div 
+            className="absolute left-0 right-0 h-12 pointer-events-none"
+            style={{
+              bottom: 0,
+              transform: 'translateY(100%)',
+              background: 'linear-gradient(to bottom, hsl(var(--background)) 0%, transparent 100%)'
+            }}
+          />
         </div>
         <div className="mt-2"></div>
         
