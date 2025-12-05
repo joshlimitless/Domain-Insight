@@ -35,7 +35,7 @@ export default function IntegrationsSection() {
       
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div 
-          className="bg-background text-center pt-3 pb-2 relative"
+          className="bg-background text-center pb-2 relative"
           style={{ 
             position: 'sticky', 
             top: '3rem', 
