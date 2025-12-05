@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -23,7 +23,36 @@ export default function RegistrationForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [gradientOpacity, setGradientOpacity] = useState(0);
+  const sectionRef = useRef<HTMLElement>(null);
   const { toast } = useToast();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!sectionRef.current) return;
+      
+      const rect = sectionRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      
+      // Start fading in when section is 200px from bottom of viewport
+      // Fully visible when section top reaches middle of viewport
+      const fadeStart = windowHeight - 200;
+      const fadeEnd = windowHeight * 0.5;
+      
+      if (rect.top >= fadeStart) {
+        setGradientOpacity(0);
+      } else if (rect.top <= fadeEnd) {
+        setGradientOpacity(1);
+      } else {
+        const progress = (fadeStart - rect.top) / (fadeStart - fadeEnd);
+        setGradientOpacity(Math.min(1, Math.max(0, progress)));
+      }
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const { data: countData } = useQuery<{ count: number }>({
     queryKey: ['/api/registrations/today-count'],
@@ -60,9 +89,15 @@ export default function RegistrationForm() {
   };
 
   return (
-    <section id="register" className="py-24 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-violet-950/30 to-background" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-violet-500/10 via-fuchsia-500/10 to-cyan-500/10 blur-3xl rounded-full" />
+    <section id="register" ref={sectionRef} className="py-24 relative">
+      <div 
+        className="absolute inset-0 bg-gradient-to-b from-background via-violet-950/30 to-background transition-opacity duration-300"
+        style={{ opacity: gradientOpacity }}
+      />
+      <div 
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-violet-500/10 via-fuchsia-500/10 to-cyan-500/10 blur-3xl rounded-full transition-opacity duration-300"
+        style={{ opacity: gradientOpacity }}
+      />
       
       <div 
         className="bg-background text-center pt-2 pb-2 relative z-10"
@@ -80,11 +115,12 @@ export default function RegistrationForm() {
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400"> Take Control?</span>
         </h2>
         <div 
-          className="absolute left-0 right-0 h-6 pointer-events-none"
+          className="absolute left-0 right-0 h-6 pointer-events-none transition-opacity duration-300"
           style={{
             bottom: 0,
             transform: 'translateY(100%)',
-            background: 'linear-gradient(to bottom, hsl(var(--background)) 0%, transparent 100%)'
+            background: 'linear-gradient(to bottom, hsl(var(--background)) 0%, transparent 100%)',
+            opacity: gradientOpacity
           }}
         />
       </div>
