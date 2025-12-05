@@ -313,4 +313,25 @@
     mask-composite: exclude;
     pointer-events: none;
   }
+
+  /* Sticky section header with gradient fade */
+  .sticky-section-header {
+    position: sticky;
+    top: 4rem;
+    z-index: 40;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .sticky-section-header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -100vw;
+    right: -100vw;
+    height: 3rem;
+    transform: translateY(100%);
+    background: linear-gradient(to bottom, hsl(var(--background)) 0%, transparent 100%);
+    pointer-events: none;
+  }
 }

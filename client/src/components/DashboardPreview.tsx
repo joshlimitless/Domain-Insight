@@ -16,15 +16,18 @@ export default function DashboardPreview() {
       <div className="absolute inset-0 bg-gradient-to-b from-background via-violet-950/20 to-background" />
       
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" data-testid="text-dashboard-title">
-            Your Analytics,
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400"> Beautifully Visualized</span>
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A powerful dashboard that gives you complete visibility into your domain traffic.
-          </p>
+        <div className="sticky-section-header bg-background">
+          <div className="text-center">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" data-testid="text-dashboard-title">
+              Your Analytics,
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400"> Beautifully Visualized</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              A powerful dashboard that gives you complete visibility into your domain traffic.
+            </p>
+          </div>
         </div>
+        <div className="mt-8"></div>
         
         <div className="relative">
           <div className="absolute -inset-4 bg-gradient-to-r from-violet-500/20 via-fuchsia-500/20 to-cyan-500/20 blur-2xl rounded-3xl" />

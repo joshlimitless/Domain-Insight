@@ -57,18 +57,21 @@ export default function RegistrationForm() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-violet-500/10 via-fuchsia-500/10 to-cyan-500/10 blur-3xl rounded-full" />
       
       <div className="relative z-10 max-w-xl mx-auto px-6">
-        <div className="text-center mb-10">
-          <Badge className="mb-4 bg-violet-500/10 text-violet-400 border-violet-500/20">
-            <Sparkles className="w-3 h-3 mr-1" /> Early Access
-          </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-register-title">
-            Ready to
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400"> Take Control?</span>
-          </h2>
-          <p className="text-muted-foreground">
-            Join thousands of domain investors who are reclaiming their data.
-          </p>
+        <div className="sticky-section-header bg-background">
+          <div className="text-center">
+            <Badge className="mb-4 bg-violet-500/10 text-violet-400 border-violet-500/20">
+              <Sparkles className="w-3 h-3 mr-1" /> Early Access
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-register-title">
+              Ready to
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400"> Take Control?</span>
+            </h2>
+            <p className="text-muted-foreground">
+              Join thousands of domain investors who are reclaiming their data.
+            </p>
+          </div>
         </div>
+        <div className="mt-2"></div>
         
         <Card className="p-8 border-white/10 bg-card/80 backdrop-blur-xl">
           <form onSubmit={handleSubmit} className="space-y-6">
