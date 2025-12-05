@@ -86,7 +86,7 @@ export default function BenefitsSection() {
           />
         </div>
         <FadingDescription className="text-lg text-muted-foreground max-w-2xl mx-auto text-center mb-8">
-          <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400">cord.to</span> provides in-depth analytics so you can make data-driven decisions about your domain portfolio.
+          <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400" style={{ fontFamily: 'var(--font-title)' }}>cord.to</span> provides in-depth analytics so you can make data-driven decisions about your domain portfolio.
         </FadingDescription>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -123,7 +123,7 @@ export default function ProblemSection() {
               <div className="mt-8 pt-6 border-t border-white/5">
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div className="space-y-3">
-                    <p className="text-muted-foreground font-medium">Without <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400">cord.to</span></p>
+                    <p className="text-muted-foreground font-medium">Without <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400" style={{ fontFamily: 'var(--font-title)' }}>cord.to</span></p>
                     <div className="space-y-2">
                       <div className="flex items-center gap-2 text-red-400">
                         <X className="w-4 h-4" /> No real-time data
@@ -137,7 +137,7 @@ export default function ProblemSection() {
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <p className="text-muted-foreground font-medium">With <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400">cord.to</span></p>
+                    <p className="text-muted-foreground font-medium">With <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400" style={{ fontFamily: 'var(--font-title)' }}>cord.to</span></p>
                     <div className="space-y-2">
                       <div className="flex items-center gap-2 text-emerald-400">
                         <Check className="w-4 h-4" /> Real-time analytics
