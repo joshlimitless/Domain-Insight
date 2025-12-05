@@ -95,7 +95,7 @@ export default function RegistrationForm() {
         style={{ opacity: gradientOpacity }}
       />
       <div 
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-violet-500/10 via-fuchsia-500/10 to-cyan-500/10 blur-3xl rounded-full transition-opacity duration-300"
+        className="absolute -top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-violet-500/10 via-fuchsia-500/10 to-cyan-500/10 blur-3xl rounded-full transition-opacity duration-300"
         style={{ opacity: gradientOpacity }}
       />
       
