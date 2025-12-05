@@ -58,7 +58,7 @@ export default function RegistrationForm() {
       
       <div className="relative z-10 max-w-xl mx-auto px-6">
         <div 
-          className="bg-background text-center pt-8 pb-6 relative"
+          className="bg-background text-center pt-8 pb-4 relative"
           style={{ 
             position: 'sticky', 
             top: '4rem', 
@@ -68,13 +68,10 @@ export default function RegistrationForm() {
           <Badge className="mb-4 bg-violet-500/10 text-violet-400 border-violet-500/20">
             <Sparkles className="w-3 h-3 mr-1" /> Early Access
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-register-title">
+          <h2 className="text-3xl md:text-4xl font-bold" data-testid="text-register-title">
             Ready to
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400"> Take Control?</span>
           </h2>
-          <p className="text-muted-foreground">
-            Join thousands of domain investors who are reclaiming their data.
-          </p>
           <div 
             className="absolute left-0 right-0 h-12 pointer-events-none"
             style={{
@@ -84,7 +81,9 @@ export default function RegistrationForm() {
             }}
           />
         </div>
-        <div className="mt-2"></div>
+        <p className="text-muted-foreground text-center mb-6">
+          Join thousands of domain investors who are reclaiming their data.
+        </p>
         
         <Card className="p-8 border-white/10 bg-card/80 backdrop-blur-xl">
           <form onSubmit={handleSubmit} className="space-y-6">

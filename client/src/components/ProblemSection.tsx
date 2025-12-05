@@ -17,22 +17,17 @@ export default function ProblemSection() {
       
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div 
-          className="bg-background text-center pt-8 pb-6"
+          className="bg-background text-center pt-8 pb-4 relative"
           style={{ 
             position: 'sticky', 
-            // @ts-ignore
-            WebkitPosition: 'sticky',
             top: '4rem', 
             zIndex: 40 
           }}
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" data-testid="text-problem-title">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold" data-testid="text-problem-title">
             Lost in the Marketplace
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400"> Black Hole?</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            When you list on marketplaces or use parking services, you lose visibility into your traffic data.
-          </p>
           <div 
             className="absolute left-0 right-0 h-12 pointer-events-none"
             style={{
@@ -42,7 +37,9 @@ export default function ProblemSection() {
             }}
           />
         </div>
-        <div className="mt-8"></div>
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-center mb-8">
+          When you list on marketplaces or use parking services, you lose visibility into your traffic data.
+        </p>
         
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">

@@ -34,7 +34,7 @@ export default function IntegrationsSection() {
       
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div 
-          className="bg-background text-center pt-8 pb-6 relative"
+          className="bg-background text-center pt-8 pb-4 relative"
           style={{ 
             position: 'sticky', 
             top: '4rem', 
@@ -44,14 +44,10 @@ export default function IntegrationsSection() {
           <Badge className="mb-4 bg-violet-500/10 text-violet-400 border-violet-500/20">
             <Plug className="w-3 h-3 mr-1" /> Integrations
           </Badge>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" data-testid="text-integrations-title">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold" data-testid="text-integrations-title">
             Your Favorite Tools,
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400"> Connected</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Insert code from Google Analytics, Phantom, Seline, and other third-party providers. 
-            <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400">cord.to</span> gives you full control.
-          </p>
           <div 
             className="absolute left-0 right-0 h-12 pointer-events-none"
             style={{
@@ -61,7 +57,10 @@ export default function IntegrationsSection() {
             }}
           />
         </div>
-        <div className="mt-8"></div>
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-center mb-8">
+          Insert code from Google Analytics, Phantom, Seline, and other third-party providers. 
+          <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400">cord.to</span> gives you full control.
+        </p>
         
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           {integrations.map((integration, index) => (

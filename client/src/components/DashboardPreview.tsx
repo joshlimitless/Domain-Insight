@@ -17,20 +17,17 @@ export default function DashboardPreview() {
       
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div 
-          className="bg-background text-center pt-8 pb-6 relative"
+          className="bg-background text-center pt-8 pb-4 relative"
           style={{ 
             position: 'sticky', 
             top: '4rem', 
             zIndex: 40 
           }}
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" data-testid="text-dashboard-title">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold" data-testid="text-dashboard-title">
             Your Analytics,
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400"> Beautifully Visualized</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A powerful dashboard that gives you complete visibility into your domain traffic.
-          </p>
           <div 
             className="absolute left-0 right-0 h-12 pointer-events-none"
             style={{
@@ -40,7 +37,9 @@ export default function DashboardPreview() {
             }}
           />
         </div>
-        <div className="mt-8"></div>
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-center mb-8">
+          A powerful dashboard that gives you complete visibility into your domain traffic.
+        </p>
         
         <div className="relative">
           <div className="absolute -inset-4 bg-gradient-to-r from-violet-500/20 via-fuchsia-500/20 to-cyan-500/20 blur-2xl rounded-3xl" />
