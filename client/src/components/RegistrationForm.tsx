@@ -133,8 +133,8 @@ export default function RegistrationForm() {
       </div>
       
       <div className="relative z-10 max-w-xl mx-auto px-6">
-        <div style={{ opacity: gradientOpacity, transition: 'opacity 300ms' }}>
-          <FadingDescription className="text-muted-foreground text-center mb-6">
+        <div style={{ opacity: gradientOpacity, transition: 'opacity 300ms', position: 'relative', zIndex: 20 }}>
+          <FadingDescription className="text-muted-foreground text-center mb-12">
             Join thousands of domain investors who are reclaiming their data.
           </FadingDescription>
         </div>
