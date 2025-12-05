@@ -96,7 +96,7 @@ export default function BenefitsSection() {
               className="group p-6 border-white/5 bg-white/[0.02] hover-elevate transition-all duration-300"
               data-testid={`card-benefit-${index}`}
             >
-              <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${benefit.gradient} p-[1px] mb-4`}>
+              <div className={`w-12 h-12 rounded-xl bg-gradient-to-b ${benefit.gradient} p-[1px] mb-4`}>
                 <div className="w-full h-full rounded-xl bg-background flex items-center justify-center">
                   <benefit.icon className="w-5 h-5 text-foreground" />
                 </div>
@@ -107,14 +107,17 @@ export default function BenefitsSection() {
                 {benefit.description}
               </p>
               
-              <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium bg-gradient-to-r ${benefit.gradient} bg-opacity-10 border border-white/5`}>
-                {benefit.title.includes("Uptime") && <TrendingUp className="w-3 h-3" />}
-                {benefit.title.includes("Speed") && <Timer className="w-3 h-3" />}
-                {benefit.title.includes("Geographic") && <MapPin className="w-3 h-3" />}
-                {benefit.title.includes("Session") && <Clock className="w-3 h-3" />}
-                {benefit.title.includes("Source") && <Search className="w-3 h-3" />}
-                {benefit.title.includes("Integration") && <Code2 className="w-3 h-3" />}
-                {benefit.stats}
+              <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium bg-gradient-to-r ${benefit.gradient} bg-opacity-10 border border-white/5 relative overflow-hidden`}>
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/10 pointer-events-none rounded-full" />
+                <div className="relative z-10 flex items-center gap-2">
+                  {benefit.title.includes("Uptime") && <TrendingUp className="w-3 h-3" />}
+                  {benefit.title.includes("Speed") && <Timer className="w-3 h-3" />}
+                  {benefit.title.includes("Geographic") && <MapPin className="w-3 h-3" />}
+                  {benefit.title.includes("Session") && <Clock className="w-3 h-3" />}
+                  {benefit.title.includes("Source") && <Search className="w-3 h-3" />}
+                  {benefit.title.includes("Integration") && <Code2 className="w-3 h-3" />}
+                  {benefit.stats}
+                </div>
               </div>
             </Card>
           ))}

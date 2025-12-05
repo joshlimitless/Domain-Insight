@@ -44,10 +44,12 @@ export default function ProblemSection() {
         
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <Card className="p-6 border-red-500/20 bg-red-500/5">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-lg bg-red-500/10 border border-red-500/20">
-                  <Lock className="w-6 h-6 text-red-400" />
+            <Card className="p-6 border-red-500/20 bg-red-500/5 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-red-500/5 pointer-events-none" />
+              <div className="relative z-10 flex items-start gap-4">
+                <div className="p-3 rounded-lg bg-red-500/10 border border-red-500/20 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/10 pointer-events-none rounded-lg" />
+                  <Lock className="w-6 h-6 text-red-400 relative z-10" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
@@ -64,10 +66,12 @@ export default function ProblemSection() {
               </div>
             </Card>
             
-            <Card className="p-6 border-amber-500/20 bg-amber-500/5">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-lg bg-amber-500/10 border border-amber-500/20">
-                  <EyeOff className="w-6 h-6 text-amber-400" />
+            <Card className="p-6 border-amber-500/20 bg-amber-500/5 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-amber-500/5 pointer-events-none" />
+              <div className="relative z-10 flex items-start gap-4">
+                <div className="p-3 rounded-lg bg-amber-500/10 border border-amber-500/20 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/10 pointer-events-none rounded-lg" />
+                  <EyeOff className="w-6 h-6 text-amber-400 relative z-10" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-2">Limited or No Analytics</h3>
@@ -80,10 +84,12 @@ export default function ProblemSection() {
               </div>
             </Card>
             
-            <Card className="p-6 border-violet-500/20 bg-violet-500/5">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-lg bg-violet-500/10 border border-violet-500/20">
-                  <Eye className="w-6 h-6 text-violet-400" />
+            <Card className="p-6 border-violet-500/20 bg-violet-500/5 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-violet-500/5 pointer-events-none" />
+              <div className="relative z-10 flex items-start gap-4">
+                <div className="p-3 rounded-lg bg-violet-500/10 border border-violet-500/20 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/10 pointer-events-none rounded-lg" />
+                  <Eye className="w-6 h-6 text-violet-400 relative z-10" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-2">Your Data, Their Control</h3>
