@@ -60,6 +60,16 @@ export async function registerRoutes(
     }
   });
 
+  app.get("/api/registrations/today-count", async (req, res) => {
+    try {
+      const count = await storage.getTodaySignupCount();
+      return res.json({ count });
+    } catch (error) {
+      console.error("Error fetching today's signup count:", error);
+      return res.status(500).json({ message: "Failed to fetch count" });
+    }
+  });
+
   app.get("/api/logo/:domain", async (req, res) => {
     try {
       const { domain } = req.params;

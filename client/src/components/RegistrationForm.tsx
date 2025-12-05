@@ -5,8 +5,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
-import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
+import { useMutation, useQuery } from "@tanstack/react-query";
+import { apiRequest, queryClient } from "@/lib/queryClient";
 import { 
   User, 
   Mail, 
@@ -14,7 +14,8 @@ import {
   ArrowRight, 
   Sparkles,
   Shield,
-  Zap
+  Zap,
+  Users
 } from "lucide-react";
 import { FadingDescription } from "./FadingDescription";
 
@@ -23,6 +24,11 @@ export default function RegistrationForm() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const { toast } = useToast();
+
+  const { data: countData } = useQuery<{ count: number }>({
+    queryKey: ['/api/registrations/today-count'],
+    refetchInterval: 30000,
+  });
 
   const registerMutation = useMutation({
     mutationFn: async (data: { name: string; email: string; phone: string }) => {
@@ -37,6 +43,7 @@ export default function RegistrationForm() {
       setName("");
       setEmail("");
       setPhone("");
+      queryClient.invalidateQueries({ queryKey: ['/api/registrations/today-count'] });
     },
     onError: (error: Error) => {
       toast({
@@ -169,6 +176,18 @@ export default function RegistrationForm() {
             </div>
           </div>
         </Card>
+        
+        {countData && countData.count > 0 && (
+          <div className="mt-6 text-center" data-testid="text-signup-counter">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500/10 border border-violet-500/20">
+              <Users className="w-4 h-4 text-violet-400" />
+              <span className="text-sm text-muted-foreground">
+                <span className="font-semibold text-violet-400">{countData.count}</span>
+                {countData.count === 1 ? ' person has' : ' people have'} joined today
+              </span>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

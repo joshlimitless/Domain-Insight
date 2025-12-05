@@ -1,5 +1,6 @@
-import { type User, type InsertUser, type Registration, type InsertRegistration } from "@shared/schema";
-import { randomUUID } from "crypto";
+import { type User, type InsertUser, type Registration, type InsertRegistration, users, registrations } from "@shared/schema";
+import { db } from "./db";
+import { eq, sql, gte, and, lt } from "drizzle-orm";
 
 export interface IStorage {
   getUser(id: string): Promise<User | undefined>;
@@ -9,54 +10,60 @@ export interface IStorage {
   createRegistration(registration: InsertRegistration): Promise<Registration>;
   getRegistrationByEmail(email: string): Promise<Registration | undefined>;
   getAllRegistrations(): Promise<Registration[]>;
+  getTodaySignupCount(): Promise<number>;
 }
 
-export class MemStorage implements IStorage {
-  private users: Map<string, User>;
-  private registrations: Map<string, Registration>;
-
-  constructor() {
-    this.users = new Map();
-    this.registrations = new Map();
-  }
-
+export class DatabaseStorage implements IStorage {
   async getUser(id: string): Promise<User | undefined> {
-    return this.users.get(id);
+    const [user] = await db.select().from(users).where(eq(users.id, id));
+    return user;
   }
 
   async getUserByUsername(username: string): Promise<User | undefined> {
-    return Array.from(this.users.values()).find(
-      (user) => user.username === username,
-    );
+    const [user] = await db.select().from(users).where(eq(users.username, username));
+    return user;
   }
 
   async createUser(insertUser: InsertUser): Promise<User> {
-    const id = randomUUID();
-    const user: User = { ...insertUser, id };
-    this.users.set(id, user);
+    const [user] = await db.insert(users).values(insertUser).returning();
     return user;
   }
 
   async createRegistration(insertRegistration: InsertRegistration): Promise<Registration> {
-    const id = randomUUID();
-    const registration: Registration = { 
-      ...insertRegistration, 
-      id,
-      createdAt: new Date()
-    };
-    this.registrations.set(id, registration);
+    const [registration] = await db.insert(registrations).values(insertRegistration).returning();
     return registration;
   }
 
   async getRegistrationByEmail(email: string): Promise<Registration | undefined> {
-    return Array.from(this.registrations.values()).find(
-      (reg) => reg.email.toLowerCase() === email.toLowerCase(),
-    );
+    const [registration] = await db
+      .select()
+      .from(registrations)
+      .where(sql`LOWER(${registrations.email}) = LOWER(${email})`);
+    return registration;
   }
 
   async getAllRegistrations(): Promise<Registration[]> {
-    return Array.from(this.registrations.values());
+    return db.select().from(registrations);
+  }
+
+  async getTodaySignupCount(): Promise<number> {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const tomorrow = new Date(today);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+
+    const result = await db
+      .select({ count: sql<number>`count(*)` })
+      .from(registrations)
+      .where(
+        and(
+          gte(registrations.createdAt, today),
+          lt(registrations.createdAt, tomorrow)
+        )
+      );
+    
+    return Number(result[0]?.count || 0);
   }
 }
 
-export const storage = new MemStorage();
+export const storage = new DatabaseStorage();
