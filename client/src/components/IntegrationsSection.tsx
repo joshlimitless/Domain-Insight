@@ -35,7 +35,7 @@ export default function IntegrationsSection() {
       
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div 
-          className="bg-background text-center pb-2 relative"
+          className="bg-background text-center pt-2 pb-2 relative"
           style={{ 
             position: 'sticky', 
             top: '3rem', 
@@ -50,7 +50,7 @@ export default function IntegrationsSection() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400"> Connected</span>
           </h2>
           <div 
-            className="absolute left-0 right-0 h-12 pointer-events-none"
+            className="absolute left-0 right-0 h-6 pointer-events-none"
             style={{
               bottom: 0,
               transform: 'translateY(100%)',
