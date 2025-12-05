@@ -13,7 +13,7 @@ export default function Header({ onCtaClick }: HeaderProps) {
           <div className="w-6 h-6 rounded-md bg-gradient-to-br from-violet-500 to-fuchsia-500 flex items-center justify-center">
             <Link className="w-3 h-3 text-white" />
           </div>
-          <span className="font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400" style={{ fontFamily: 'var(--font-title)', fontSize: '1.625rem' }} data-testid="text-logo">cord.to</span>
+          <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400" style={{ fontFamily: 'var(--font-title)', fontSize: '1.625rem', letterSpacing: '0.02em' }} data-testid="text-logo">cord.to</span>
         </div>
         
         <nav className="hidden md:flex items-center gap-8">
