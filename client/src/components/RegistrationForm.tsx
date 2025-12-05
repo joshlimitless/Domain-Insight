@@ -133,7 +133,7 @@ export default function RegistrationForm() {
       </div>
       
       <div className="relative z-10 max-w-xl mx-auto px-6">
-        <div style={{ opacity: gradientOpacity, transition: 'opacity 300ms', position: 'relative', zIndex: 20 }}>
+        <div style={{ opacity: gradientOpacity, transition: 'opacity 300ms', position: 'relative', zIndex: 50 }}>
           <FadingDescription className="text-muted-foreground text-center mb-12">
             Join thousands of domain investors who are reclaiming their data.
           </FadingDescription>
@@ -194,6 +194,7 @@ export default function RegistrationForm() {
             
             <Button 
               type="submit"
+              size="lg"
               className="w-full bg-gradient-to-r from-violet-500 to-fuchsia-500 border-0 text-white shadow-xl shadow-violet-500/30 gradient-outline font-bold"
               disabled={registerMutation.isPending}
               data-testid="button-submit"
