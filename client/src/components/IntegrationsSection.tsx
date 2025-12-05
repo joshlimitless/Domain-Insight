@@ -70,10 +70,9 @@ export default function IntegrationsSection() {
               className="group p-6 border-white/5 bg-white/[0.02] hover-elevate transition-all duration-300"
               data-testid={`card-integration-${index}`}
             >
-              <div className={`w-14 h-14 rounded-2xl bg-gradient-to-b ${integration.color} p-[1px] mb-5 relative`}>
-                <div className="w-full h-full rounded-2xl bg-background flex items-center justify-center relative">
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/5 rounded-2xl pointer-events-none" />
-                  <integration.icon className="w-6 h-6 relative z-10" />
+              <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${integration.color} p-[1px] mb-5`}>
+                <div className="w-full h-full rounded-2xl bg-background flex items-center justify-center">
+                  <integration.icon className="w-6 h-6" />
                 </div>
               </div>
               
