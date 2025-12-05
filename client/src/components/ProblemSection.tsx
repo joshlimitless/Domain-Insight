@@ -26,8 +26,8 @@ export default function ProblemSection() {
           }}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold" data-testid="text-problem-title">
-            Lost in the Marketplace
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400"> Black Hole?</span>
+            Lost in Marketplace
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400"> Black Holes?</span>
           </h2>
           <div 
             className="absolute left-0 right-0 h-6 pointer-events-none"
