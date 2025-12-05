@@ -30,10 +30,10 @@ export default function Header({ onCtaClick }: HeaderProps) {
         
         <Button 
           onClick={onCtaClick}
-          className="shrink-0 bg-gradient-to-r from-violet-500 to-fuchsia-500 border-0 text-white shadow-lg shadow-violet-500/25 text-xs sm:text-sm px-3 sm:px-4 gradient-outline"
+          className="shrink-0 bg-gradient-to-r from-violet-500 to-fuchsia-500 border-0 text-white shadow-lg shadow-violet-500/25 text-xs sm:text-[10.4px] px-2 sm:px-3 py-1 font-bold gradient-outline"
           data-testid="button-header-cta"
         >
-          <span className="hidden sm:inline">Take Control</span>
+          <span className="hidden sm:inline">TAKE CONTROL</span>
           <span className="sm:hidden">Get Started</span>
         </Button>
       </div>
