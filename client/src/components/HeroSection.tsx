@@ -39,7 +39,7 @@ export default function HeroSection({ onCtaClick }: HeroSectionProps) {
             style={{
               background: `
                 linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, transparent 15%),
-                linear-gradient(180deg, transparent 90%, rgba(0, 0, 0, 0.4) 100%),
+                linear-gradient(180deg, transparent 90%, rgba(88, 28, 135, 0.4) 100%),
                 linear-gradient(90deg, #f97316, #b45309)
               `
             }}
