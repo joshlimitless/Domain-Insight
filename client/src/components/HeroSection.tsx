@@ -35,10 +35,7 @@ export default function HeroSection({ onCtaClick }: HeroSectionProps) {
           <Button 
             size="lg"
             onClick={onCtaClick}
-            className="border-0 text-white gradient-outline pl-[16px] pr-[16px] font-bold"
-            style={{
-              background: `linear-gradient(90deg, #ca8a04, #f97316, #7c3aed)`
-            }}
+            className="bg-gradient-to-r from-orange-500 to-amber-600 border-0 text-white shadow-xl shadow-orange-500/30 gradient-outline pl-[16px] pr-[16px] font-bold"
             data-testid="button-hero-cta"
           >
             Take Control
