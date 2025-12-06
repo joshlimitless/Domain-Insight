@@ -33,8 +33,8 @@ export default function Header({ onCtaClick }: HeaderProps) {
           className="hover-elevate active-elevate-2 min-h-9 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-title focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover-elevate active-elevate-2 border-primary-border shrink-0 bg-gradient-to-r from-orange-500 to-orange-600 border-0 text-white shadow-lg shadow-orange-500/30 sm:text-[10.4px] px-2 sm:px-3 py-0.5 gradient-outline font-black pt-[0px] pb-[0px] text-[14px]"
           data-testid="button-header-cta"
         >
-          <span className="hidden sm:inline">TAKE CONTROL</span>
-          <span className="sm:hidden">TAKE CONTROL</span>
+          <span className="hidden sm:inline">REGISTER</span>
+          <span className="sm:hidden">REGISTER</span>
         </Button>
       </div>
     </header>
