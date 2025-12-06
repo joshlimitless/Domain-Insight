@@ -35,13 +35,9 @@ export default function HeroSection({ onCtaClick }: HeroSectionProps) {
           <Button 
             size="lg"
             onClick={onCtaClick}
-            className="border-0 text-white shadow-xl shadow-orange-500/30 gradient-outline pl-[16px] pr-[16px] font-bold"
+            className="border-0 text-white gradient-outline pl-[16px] pr-[16px] font-bold"
             style={{
-              background: `
-                linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, transparent 15%),
-                linear-gradient(180deg, transparent 90%, rgba(88, 28, 135, 0.4) 100%),
-                linear-gradient(90deg, #f97316, #b45309)
-              `
+              background: `linear-gradient(90deg, #ca8a04, #f97316, #7c3aed)`
             }}
             data-testid="button-hero-cta"
           >
