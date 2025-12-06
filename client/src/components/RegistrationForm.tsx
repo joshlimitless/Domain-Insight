@@ -196,10 +196,10 @@ export default function RegistrationForm() {
               type="submit"
               size="lg"
               className="w-full bg-gradient-to-r from-violet-500 to-fuchsia-500 border-0 text-white shadow-xl shadow-violet-500/30 gradient-outline font-bold"
-              disabled={registerMutation.isPending}
+              disabled={registerMutation.isLoading}
               data-testid="button-submit"
             >
-              {registerMutation.isPending ? (
+              {registerMutation.isLoading ? (
                 "Processing..."
               ) : (
                 <>
